@@ -51,6 +51,7 @@ class LanguageToolTextField extends StatefulWidget {
   final Brightness? keyboardAppearance;
   final bool autocorrect;
   final bool readOnly;
+  final bool obscureText;
   final MouseCursor? mouseCursor;
   final bool alignCenter;
 
@@ -70,6 +71,7 @@ class LanguageToolTextField extends StatefulWidget {
     this.autocorrect = true,
     this.autoFocus = false,
     this.readOnly = false,
+    this.obscureText = false,
     this.textInputAction,
     this.keyboardType,
     this.focusNode,
@@ -143,6 +145,7 @@ class _LanguageToolTextFieldState extends State<LanguageToolTextField> {
           keyboardType: widget.keyboardType,
           autofocus: widget.autoFocus,
           readOnly: widget.readOnly,
+          obscureText: widget.obscureText,
           mouseCursor: widget.mouseCursor,
           onChanged: widget.onTextChange,
           onSubmitted: widget.onTextSubmitted,
